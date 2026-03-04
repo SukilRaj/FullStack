@@ -1,0 +1,13 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+body {
+    background-color: lightyellow;
+}
+
+h2:hover, p:hover {
+    text-shadow: 0 0 10px #c83f1d;
+    transition: 0.5s;
+}

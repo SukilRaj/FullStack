@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Slideshow</title>
+</head>
+<body>
+
+<h2>Slideshow</h2>
+<img id="slide" src="../ex2/img1.png" width="300"><br><br>
+<button onclick="prev()">Previous</button>
+<button onclick="next()">Next</button>
+
+<script>
+let i = 1;
+function next() {
+  i = (i % 4) + 1;
+  document.getElementById("slide").src = "../ex2/img" + i + ".png";
+}
+function prev() {
+  i = (i + 3) % 4;
+  document.getElementById("slide").src = "../ex2/img" + i + ".png";
+}
+</script>
+
+</body>
+</html>

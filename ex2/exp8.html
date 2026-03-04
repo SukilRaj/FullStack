@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    body {
+        background-color: rgb(252, 82, 110);
+    }
+.vertical a {
+    display: block;
+    width: 150px;
+    padding: 10px;
+    background-color: lightgray;
+    text-decoration: none;
+    margin-bottom: 2px;
+    border-radius: 10px;
+}
+.horizontal a {
+    display: inline-block;
+    padding: 10px;
+    background-color: lightblue;
+    text-decoration: none;
+    margin-right: 5px;
+    transform: translateY(3px);
+    border-radius: 10px;
+
+}
+a:hover {
+    background-color: rgb(156, 47, 199);
+    transition: 0.5s;
+    transform: translateX(5px) ;
+}
+
+</style>
+</head>
+<body>
+
+<h3>Vertical Menu</h3>
+<div class="vertical">
+<a href="#">Home</a>
+<a href="#">Profile</a>
+<a href="#">Contact</a>
+</div>
+
+<h3>Horizontal Menu</h3>
+<div class="horizontal">
+<a href="#">Home</a>
+<a href="#">Profile</a>
+<a href="#">Contact</a>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Registration Form</title>
+    <style>
+        :root {
+            --primary-color: #6366f1;
+            --bg-gradient: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: var(--bg-gradient);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+        }
+
+        .form-container {
+            background: white;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 450px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+            font-weight: 600;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 14px;
+            font-weight: 500;
+            color: #666;
+        }
+
+        input[type="text"],
+        input[type="date"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1.5px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 16px;
+            box-sizing: border-box; /* Ensures padding doesn't break width */
+            transition: all 0.3s ease;
+        }
+
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1);
+        }
+
+        textarea {
+            height: 80px;
+            resize: vertical;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            background: var(--primary-color);
+            color: white;
+            padding: 14px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            margin-top: 10px;
+        }
+
+        input[type="submit"]:hover {
+            background: #4f46e5;
+        }
+
+        /* Error state styling */
+        .error-input {
+            border-color: #ff4757 !important;
+            background-color: #fffafb;
+        }
+    </style>
+
+    <script>
+        function validate(e) {
+            const fields = ["name", "city", "dob", "email", "number", "desc"];
+            let isValid = true;
+
+            fields.forEach(id => {
+                const element = document.getElementById(id);
+                if (element.value.trim() === "") {
+                    element.classList.add("error-input");
+                    isValid = false;
+                } else {
+                    element.classList.remove("error-input");
+                }
+            });
+
+            if (!isValid) {
+                alert("Please fill in all highlighted fields.");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</head>
+<body>
+
+<div class="form-container" >
+    <h2>Create Account</h2>
+    <form onsubmit="return validate()">
+        <div class="input-group">
+            <label>Full Name</label>
+            <input type="text" id="name" placeholder="John Doe">
+        </div>
+
+        <div class="input-group">
+            <label>City</label>
+            <input type="text" id="city" placeholder="New York">
+        </div>
+
+        <div class="input-group">
+            <label>Date of Birth</label>
+            <input type="date" id="dob">
+        </div>
+
+        <div class="input-group">
+            <label>Email Address</label>
+            <input type="email" id="email" placeholder="john@example.com">
+        </div>
+
+        <div class="input-group">
+            <label>Phone Number</label>
+            <input type="text" id="number" placeholder="+1 234 567 890">
+        </div>
+
+        <div class="input-group">
+            <label>Description</label>
+            <textarea id="desc" placeholder="Tell us about yourself..."></textarea>
+        </div>
+
+        <input type="submit" value="Submit Form">
+    </form>
+</div>
+
+</body>
+</html>

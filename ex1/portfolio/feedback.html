@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+        <style>
+body {
+    margin: 20px;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+
+    background: radial-gradient(circle at top, #111, #000);
+    animation: floatBg 6s ease-in-out infinite alternate;
+}
+
+@keyframes floatBg {
+    from {
+        background-position: 0% 0%;
+    }
+    to {
+        background-position: 100% 100%;
+    }
+}
+
+
+h2 {
+    color: #00ffff;
+    font-size: 26px;
+    transition: 0.3s;
+}
+
+h2:hover {
+    text-shadow: 0 0 10px #00ffff;
+}
+
+input {
+    margin: 20px;
+    background-color: rgb(95, 172, 172);
+    font-family: 'Poppins', sans-serif;
+    color: rgb(245, 241, 241);
+}
+
+textarea {
+    margin: 20px;
+    background-color: rgb(79, 163, 163);
+    font-family: 'Poppins', sans-serif;
+    color: rgb(236, 230, 230);   
+
+}
+p, li {
+    font-size: 15px;
+    line-height: 1.6;
+    transition: 0.3s;
+}
+
+p:hover, li:hover {
+    color: #cccccc;
+    transform: translateX(5px);
+}
+.feedback-form {
+  max-width: 500px;
+  margin: auto;
+  background: #1e293b;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(56, 189, 248, 0.4);
+}
+
+.feedback-form label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+ color: #00ffff;}
+
+.feedback-form input,
+.feedback-form select,
+.feedback-form textarea {
+  width: 90%;
+  padding: 15px;
+  margin-top: 5px;
+  border-radius: 6px;
+  border: none;
+  background: #020617;
+  color: white;
+}
+
+.feedback-form input:focus,
+.feedback-form select:focus,
+.feedback-form textarea:focus {
+  outline: 2px solid #38bdf8;
+}
+
+.feedback-form button {
+  margin-top: 15px;
+  width: 100%;
+  padding: 12px;
+  background:  #00ffff;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.feedback-form button:hover {
+  background:  #00ffff;
+  transform: scale(1.05);
+}
+
+</style>
+
+    </head>
+<body>
+   <section>
+  <h2>Game Feedback Form</h2>
+
+  <form class="feedback-form" method="get" action="thank.html">
+    
+    <label for="name">Your Name</label>
+    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+    <label for="email">Email Address</label>
+    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+    <label for="rating">Game Rating</label>
+    <select id="rating" name="rating" required>
+      <option value="">Select Rating</option>
+      <option value="5">⭐⭐⭐⭐⭐ - Excellent</option>
+      <option value="4">⭐⭐⭐⭐ - Very Good</option>
+      <option value="3">⭐⭐⭐ - Good</option>
+      <option value="2">⭐⭐ - Fair</option>
+      <option value="1">⭐ - Poor</option>
+    </select>
+
+    <label for="feedback">Your Feedback</label>
+    <textarea id="feedback" name="feedback" rows="5" placeholder="Write your thoughts about Spider-Man 2..." required></textarea>
+
+    <button type="submit">Submit Feedback</button>
+
+  </form>
+</section>
+
+
+</body>
+</html>
